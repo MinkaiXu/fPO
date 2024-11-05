@@ -1,0 +1,42 @@
+alpha: 0.99
+attn_implementation: flash_attention_2
+beta: 2.0
+bf16: true
+dataset_mixer:
+  HuggingFaceH4/ultrafeedback_binarized: 1.0
+dataset_splits:
+- train_prefs
+- test_prefs
+do_eval: true
+eval_steps: 400
+evaluation_strategy: steps
+gamma_beta_ratio: 0.8
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: simpo-exps
+learning_rate: 3.0e-07
+log_level: info
+logging_steps: 5
+loss_type: alphapo
+lr_scheduler_type: cosine
+max_length: 1024
+max_prompt_length: 512
+model_name_or_path: alignment-handbook/zephyr-7b-sft-full
+num_train_epochs: 1
+optim: adamw_torch
+output_dir: outputs/mistral-7b-base-alphapo
+per_device_eval_batch_size: 4
+per_device_train_batch_size: 2
+preprocessing_num_workers: 12
+push_to_hub: false
+report_to:
+- wandb
+run_name: mistral-7b-base-alphapo
+save_steps: 1000000
+save_strategy: steps
+save_total_limit: 20
+seed: 42
+torch_dtype: null
+warmup_ratio: 0.1

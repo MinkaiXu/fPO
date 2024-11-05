@@ -1,0 +1,42 @@
+alpha: 0.99
+attn_implementation: flash_attention_2
+beta: 2.6
+bf16: true
+dataset_mixer:
+  princeton-nlp/llama3-ultrafeedback: 1.0
+dataset_splits:
+- train
+- test
+do_eval: true
+eval_steps: 400
+evaluation_strategy: steps
+gamma_beta_ratio: 0.55
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: simpo-exps
+learning_rate: 1.0e-06
+log_level: info
+logging_steps: 5
+loss_type: alphapo
+lr_scheduler_type: cosine
+max_length: 2048
+max_prompt_length: 1800
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+num_train_epochs: 1
+optim: adamw_torch
+output_dir: outputs/llama-3-8b-instruct-alphapo
+per_device_eval_batch_size: 4
+per_device_train_batch_size: 2
+preprocessing_num_workers: 12
+push_to_hub: false
+report_to:
+- wandb
+run_name: llama-3-8b-instruct-alphapo
+save_steps: 1000000
+save_strategy: steps
+save_total_limit: 20
+seed: 42
+torch_dtype: null
+warmup_ratio: 0.1
