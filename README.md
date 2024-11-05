@@ -1,4 +1,4 @@
-# $f$-PO: Generalizing Preference Optimization with -divergence Minimization
+# $f$-PO: Generalizing Preference Optimization with $f$-divergence Minimization
 
 Jiaqi Han*, Mingjian Jiang*, Yuxuan Song, Jure Leskovec, Stefano Ermon, Minkai Xu*^
 
