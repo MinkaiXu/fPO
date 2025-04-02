@@ -1,20 +1,26 @@
 # $f$-PO: Generalizing Preference Optimization with $f$-divergence Minimization
 
-Jiaqi Han*, Mingjian Jiang*, Yuxuan Song, Jure Leskovec, Stefano Ermon, Minkai Xu*^
-
-*Equal contribution. ^Corresponding author.
-
-Stanford University
+> Jiaqi Han*, Mingjian Jiang*, Yuxuan Song, Jure Leskovec, Stefano Ermon, Minkai Xu*^
+> <br>*Equal contribution. ^Corresponding author.
+> <br>**Stanford University**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MinkaiXu/fPO/blob/main/LICENSE)
 [![ArXiv](https://img.shields.io/static/v1?&logo=arxiv&label=Paper&message=Arxiv:fPO&color=B31B1B)](https://arxiv.org/abs/2410.21662)
 
 ## Introduction
+
 We introduce $f$-PO, a novel approach that generalizes preference optimization via minimizing the $f$-divergence through solving certain distribution matching problem.
 The method subsumes existing offline preference optimization methods like DPO while inspiring new formulations by exploring other members in the $f$-divergence family.
 Results demonstrate the efficacy of $f$-PO on a wide suite of benchmarks, including, e.g., AlpacaEval, MT-Bench, ArenaHard, and more.
 
 ![Overview](assets/dist.png "Overview")
+
+## Checkpoints
+
+We provide the checkpoints of the models trained in the paper. The checkpoints are hosted on Hugging Face Hub. You can download the checkpoints using the following links:
+
+- [mistral-7b-base-fpo](https://huggingface.co/mkxu/mistral-7b-base-fpo)
+- [llama-3-8b-instruct-fpo](https://huggingface.co/mkxu/llama-3-8b-instruct-fpo)
 
 ## Environment
 Please refer to the [environment file](https://github.com/princeton-nlp/SimPO/blob/main/environment.yml) for the detailed dependencies.
@@ -51,7 +57,7 @@ For the evaluation on AlpacaEval, MT-Bench, and ArenaHard, refer to [here](https
 Please consider citing our work if you find it useful:
 ```
 @article{han2024f,
-  title={$ f $-PO: Generalizing Preference Optimization with $ f $-divergence Minimization},
+  title={$f$-PO: Generalizing Preference Optimization with $f$-divergence Minimization},
   author={Han, Jiaqi and Jiang, Mingjian and Song, Yuxuan and Leskovec, Jure and Ermon, Stefano and Xu, Minkai},
   journal={arXiv preprint arXiv:2410.21662},
   year={2024}
